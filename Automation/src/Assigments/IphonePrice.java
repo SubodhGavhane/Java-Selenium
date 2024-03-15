@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class test2 {
+public class IphonePrice {
 public static void main(String[] args) throws InterruptedException {
 	WebDriver driver = new ChromeDriver();
 
@@ -22,7 +22,7 @@ public static void main(String[] args) throws InterruptedException {
 
 	driver.findElement(By.xpath("//div[text()='Apple iPhone 14 (Starlight, 128 GB)']")).click();
 		
-	WebElement  price=driver.findElement(By.xpath("(//div[text()='₹58,999'])[1]"));
+	WebElement  price=driver.findElement(By.xpath("(//div[@class='_25b18c'])[2]"));
 	
 	String iphone = price.getText();
 	System.out.println(iphone);
