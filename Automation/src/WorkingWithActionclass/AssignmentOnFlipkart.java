@@ -39,15 +39,16 @@ public class AssignmentOnFlipkart {
 			
 			System.out.println(ShoePage.get(i).getText()+" price :- "+ShoePrice.get(i).getText());
 		}
-		
-		
+			
 		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//a[text()='Careers']")).click();
 		
 		WebElement JobDropdown = driver.findElement(By.xpath("(//a[text()='Jobs'])[1]"));
 		
+		//Action Class Object Creation
 		Actions Drop=new Actions(driver);
+		
 		Drop.moveToElement(JobDropdown).perform();
 		
 		Thread.sleep(2000);
@@ -56,7 +57,7 @@ public class AssignmentOnFlipkart {
 		
 		Thread.sleep(2000);
 		
-		driver.findElement(By.id("candidate-login-before")).click();
+		driver.findElement(By.xpath("(//a[text()='Candidate Login'])[1]")).click();
 		
 		driver.findElement(By.name("username")).sendKeys("subodhgavhane@gmail.com");
 		

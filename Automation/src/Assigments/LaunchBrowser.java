@@ -1,4 +1,4 @@
-package com.selenium;
+package Assigments;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
