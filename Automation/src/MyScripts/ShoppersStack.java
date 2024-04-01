@@ -36,9 +36,6 @@ public class ShoppersStack {
 		for (int i = 0; i <= str.size(); i++) {
 			System.out.println(str.get(i).getText());
 			System.out.println("=====================");
-			{
-
-			}
 		}
 
 //		if (str.isSelected()) {
