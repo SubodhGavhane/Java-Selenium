@@ -47,6 +47,7 @@ public class AlertPopUpAssignment {
 		WebElement Verify = driver.findElement(By.xpath("//div[@class='panel-heading']"));
 		
 		Thread.sleep(2000);
+		
 		String ActualPrice = Verify.getText();
 		System.out.println(ActualPrice);
 		
@@ -59,6 +60,12 @@ public class AlertPopUpAssignment {
 		else {
 			System.out.println("Wrong Price");
 		}
+		
+		
+		driver.findElement(By.xpath("//button[text()='Place Order']")).click();
+		
+		driver.findElement(By.id("name")).sendKeys("xyz",Keys.TAB,"India",Keys.TAB,"12345678958965325478",Keys.TAB,"05",Keys.TAB,"2021");
 
+		driver.findElement(By.xpath("//button[@onclick='purchaseOrder()']")).click();
 	}
 }
