@@ -2,7 +2,7 @@ package KeywordDrivenFramework;
 
 import java.io.IOException;
 
-public class validlogin extends BaseTest {
+public class Login extends BaseTest {
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		BaseTest test = new BaseTest();
