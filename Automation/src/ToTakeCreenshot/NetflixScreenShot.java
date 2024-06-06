@@ -21,7 +21,7 @@ public class NetflixScreenShot {
 
 		driver.get("https://www.netflix.com/in/");
 
-		WebElement net = driver.findElement(By.xpath("//span[@class='default-ltr-cache-0 ev1dnif0']889+"));
+		WebElement net = driver.findElement(By.xpath("//span[@class='default-ltr-cache-0 ev1dnif0']"));
 
 		File source = net.getScreenshotAs(OutputType.FILE);
 		File dest=new File("./screenshot/netflix.png");

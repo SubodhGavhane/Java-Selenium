@@ -26,15 +26,15 @@ public class WorkingWithFindElementsMethod {
 
 		
 		// for each loop
-//		for(WebElement name:ipadName)
-//		{
-//			System.out.println(name.getText());
-//		}
-
-		// for loop
-		for (int i = 0; i < ipadName.size(); i++) {
-			System.out.println(ipadName.get(i).getText()+"___________"+ipadPrice.get(i).getText());
+		for(WebElement name:ipadName)
+		{
+			System.out.println(name.getText());
 		}
+
+//		// for loop
+//		for (int i = 0; i < ipadName.size(); i++) {
+//			System.out.println(ipadName.get(i).getText()+"___________"+ipadPrice.get(i).getText());
+//		}
 	}
 
 }

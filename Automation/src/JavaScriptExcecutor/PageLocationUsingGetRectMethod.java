@@ -26,6 +26,8 @@ public class PageLocationUsingGetRectMethod {
 		
 		JavascriptExecutor js= (JavascriptExecutor) driver;
 		
-		js.executeScript("window.scrollBy("+x+","+y+");");
+		js.executeScript("window.scrollBy("+x+","+y+")");
+		
+//		p.click();
 	}
 }

@@ -21,7 +21,7 @@ public class BaseClass implements IconstantKeywords {
 		this.path = PropertyPath;
 	}
 
-	BaseClass(String ExcelPath, String SheetName) {
+	public BaseClass(String ExcelPath, String SheetName) {
 		this.path = ExcelPath;
 		this.SheetName = SheetName;
 	}

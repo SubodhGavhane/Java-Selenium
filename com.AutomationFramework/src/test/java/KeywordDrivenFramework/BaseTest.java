@@ -8,9 +8,11 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.FindBy;
 
 public class BaseTest implements IconstantKeywords {
 
@@ -39,28 +41,25 @@ public class BaseTest implements IconstantKeywords {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMESECONDS));
 		driver.get(url);
 	}
-	
-	
-	public void login() throws IOException
-	{
+
+	public void login() throws IOException {
 		BaseClass bs = new BaseClass(Property);
-		String username = bs.GetDataFromPropertyFile( "username");
+		String username = bs.GetDataFromPropertyFile("username");
 		String password = bs.GetDataFromPropertyFile("password");
 
 		driver.findElement(By.name("username")).sendKeys(username);
 		driver.findElement(By.name("pwd")).sendKeys(password);
 		driver.findElement(By.id("loginButton")).click();
 	}
-	
-	public void CreateUserLink()
-	{
+
+	public void CreateUserLink() {
 		driver.findElement(By.xpath("//a[@class=\"content users\"]")).click();
 		driver.findElement(By.xpath("//input[@value='Create New User']")).click();
 	}
 
 	public void CreateUser() throws EncryptedDocumentException, IOException, InterruptedException {
+		BaseClass bs1 = new BaseClass(Excel, SheetName);
 
-		BaseClass bs1 = new BaseClass(Excel,SheetName);
 		String username1 = bs1.FetchingDataFromExcelFile(1, 0);
 		driver.findElement(By.name("username")).sendKeys(username1);
 		String password1 = bs1.FetchingDataFromExcelFile(1, 2);
@@ -76,24 +75,19 @@ public class BaseTest implements IconstantKeywords {
 		driver.findElement(By.xpath("//input[@type=\"submit\"]")).click();
 
 	}
-	
-	
-	public void ToDeleteUser() throws InterruptedException
-	{
+
+	public void ToDeleteUser() throws InterruptedException {
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[text()='gavhane, subodh (subodh)']")).click();
 		driver.findElement(By.xpath("//input[@value='Delete This User']")).click();
-		
 		Alert alt = driver.switchTo().alert();
 		alt.accept();
 	}
-	
-	
+
 	// to close
 
 	public void close() {
 		driver.quit();
 	}
-
 
 }

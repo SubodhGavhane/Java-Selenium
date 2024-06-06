@@ -26,7 +26,7 @@ public class GoogleMapsAssignment {
 		Thread.sleep(1000);
 		driver.findElement(By.name("q")).sendKeys("qsp wakad", Keys.ENTER);
 
-		WebElement Address = driver.findElement(By.xpath("(//div[@class='Io6YTe fontBodyMedium kR99db '])[1]"));
+		WebElement Address = driver.findElement(By.xpath("//div[@class='Io6YTe fontBodyMedium kR99db ']"));
 
 		System.out.println(Address.getText());
 
